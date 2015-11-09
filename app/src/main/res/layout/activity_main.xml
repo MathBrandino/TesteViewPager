@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-<android.support.design.widget.TabLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tab_layout"
-    android:background="#62b2f4"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    app:tabTextColor="#FFFFFF"
-    app:tabIndicatorColor="#000000"
-    app:tabGravity="center"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    android:layout_height="wrap_content"/>
+    <android.support.design.widget.TabLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#62b2f4"
+        app:tabGravity="center"
+        app:tabIndicatorColor="#000000"
+
+        app:tabTextColor="#FFFFFF" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"
-        android:paddingTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:paddingTop="5dp">
 
 
         <FrameLayout

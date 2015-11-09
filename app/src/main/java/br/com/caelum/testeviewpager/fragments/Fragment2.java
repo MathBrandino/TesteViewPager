@@ -1,17 +1,11 @@
 package br.com.caelum.testeviewpager.fragments;
 
-import android.annotation.TargetApi;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -24,6 +18,11 @@ import br.com.caelum.testeviewpager.application.MinhaApplication;
  * Created by matheus on 03/11/15.
  */
 public class Fragment2 extends Fragment {
+
+    private RecyclerView recyclerView;
+    private MinhaApplication application;
+    private RecyclerView.LayoutManager layoutManager;
+    private boolean meuBoolean = true;
 
     public RecyclerView getRecyclerView() {
         return recyclerView;
@@ -56,11 +55,6 @@ public class Fragment2 extends Fragment {
     public void setMeuBoolean(boolean meuBoolean) {
         this.meuBoolean = meuBoolean;
     }
-
-    private RecyclerView recyclerView;
-    private MinhaApplication application;
-    private RecyclerView.LayoutManager layoutManager;
-    private boolean meuBoolean = true;
 
     @Nullable
     @Override

@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        if (viewPager.getCurrentItem() == 1 || viewPager.getCurrentItem() == 2){
+        if (viewPager.getCurrentItem() == 1 || viewPager.getCurrentItem() == 2) {
             rotacionar.setVisible(false);
         } else {
             rotacionar.setVisible(true);
