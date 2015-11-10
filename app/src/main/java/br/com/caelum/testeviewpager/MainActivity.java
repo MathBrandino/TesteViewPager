@@ -105,9 +105,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
 
-                fragment2.setMeuBoolean(!fragment2.isMeuBoolean());
-                fragment2.setLayoutManager(fragment2.isMeuBoolean() ? new GridLayoutManager(MainActivity.this, 5) : new LinearLayoutManager(MainActivity.this, 1, false));
-                fragment2.getRecyclerView().setLayoutManager(fragment2.getLayoutManager());
+               fragment2.rotaciona();
 
                 return true;
             }

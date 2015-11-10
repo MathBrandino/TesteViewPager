@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,38 +25,6 @@ public class Fragment2 extends Fragment {
     private RecyclerView.LayoutManager layoutManager;
     private boolean meuBoolean = true;
 
-    public RecyclerView getRecyclerView() {
-        return recyclerView;
-    }
-
-    public void setRecyclerView(RecyclerView recyclerView) {
-        this.recyclerView = recyclerView;
-    }
-
-    public MinhaApplication getApplication() {
-        return application;
-    }
-
-    public void setApplication(MinhaApplication application) {
-        this.application = application;
-    }
-
-    public RecyclerView.LayoutManager getLayoutManager() {
-        return layoutManager;
-    }
-
-    public void setLayoutManager(RecyclerView.LayoutManager layoutManager) {
-        this.layoutManager = layoutManager;
-    }
-
-    public boolean isMeuBoolean() {
-        return meuBoolean;
-    }
-
-    public void setMeuBoolean(boolean meuBoolean) {
-        this.meuBoolean = meuBoolean;
-    }
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -73,4 +42,10 @@ public class Fragment2 extends Fragment {
     }
 
 
+    public void rotaciona() {
+
+        meuBoolean = !meuBoolean;
+        layoutManager = meuBoolean ?  new GridLayoutManager(getContext(), 5) : new LinearLayoutManager(getContext(), 1, false);
+        recyclerView.setLayoutManager(layoutManager);
+    }
 }
